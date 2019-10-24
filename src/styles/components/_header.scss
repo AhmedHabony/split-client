@@ -1,0 +1,94 @@
+.Header {
+  padding: 1rem 0;
+  background-color: #FDF9F3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  &__logo{
+    width: 11rem;
+  }
+  &__features {
+    display: flex;
+    justify-content: space-between;
+    &__link{
+      margin: 0 .25rem;
+      text-decoration: none;
+      padding: 1.2rem 1.8rem;
+      color: #FDF9F3;
+      background-color: #00c8d7;
+      transition: .4s;
+      border-radius: 1rem;
+
+      &-note{
+        background-color: #83b582;
+        &:hover{
+          background-color: #6ea86d;
+        }
+        &:active{
+          background-color: #4f834e;
+        }
+
+      }
+      &-plan{
+        background-color: #91d5a6;
+        &:hover{
+          background-color: #6cc788;
+        }
+        &:active{
+          background-color: #3da15c;
+        }
+      }
+      &-income{
+        background-color: #be7575;
+        &:hover{
+          background-color: #b35e5e;
+        }
+        &:active{
+          background-color: #8b4242;
+        }
+      }
+
+      &:hover{
+        //background-color: darken(50%);
+      }
+      &-name{
+        font-size: 1.8rem;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  &__sign{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__link{
+      margin: 0 .5rem;
+      text-decoration: none;
+      border: 2px #269aea solid;
+      padding: 1.4rem  .3rem;
+      background-color: transparent;
+      border-radius: 110rem;
+      &-name{
+        border-radius: 110rem;
+        font-size: 1.8rem;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 1px;
+        padding: 1.1rem 2.5rem;
+        transition: all .4s;
+
+        &:hover{
+          background-color: #269aea;
+          color: #fff;
+        }
+        &:active{
+          background-color: #0f629b;
+        }
+      }
+    }
+  }
+
+
+}

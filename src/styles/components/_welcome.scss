@@ -1,0 +1,43 @@
+.Welcome {
+  position: relative;
+  text-align: center;
+  border-radius: 1.5rem;
+  &__message{
+    padding: 9rem 0;
+  }
+  &__sub{
+    margin-top: 1rem;
+    font-size: 2.1rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #666;
+
+  ;
+  }
+  &__title{
+    font-family: 'Be Vietnam', sans-serif;
+    color: #555 ;
+    //color: #2a2a2a ;
+    font-size: 4rem;
+    &-s{
+      color: $blue-color-main;
+    }
+    &-p{
+      color: $yellow-color-main;
+    }
+    &-l{
+      color: #207561;
+    }
+    &-i{
+      color: $green-color-main
+    }
+    &-t{
+      color: $red-color-main;
+    }
+  }
+}
+
+
+
+
