@@ -20,7 +20,7 @@ class Header extends Component {
                         <span className={'Header__features__link-name'} >Plan The Day</span>
                     </Link>
 
-                    <Link to={'/note'}   className={'Header__features__link Header__features__link-income'}>
+                    <Link to={'/incomes'}   className={'Header__features__link Header__features__link-income'}>
                         <span className={'Header__features__link-name'}>Manage Incomes</span>
                     </Link>
 

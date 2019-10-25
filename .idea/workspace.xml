@@ -3,16 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="b019dd5b-7fcf-4b4a-b9a5-7238f9ed3213" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/note-card.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/note-card.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/feature.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/feature.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/features.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/features.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/base/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/components/_btns.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/_btns.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/_feature.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/_feature.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/components/_welcome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/_welcome.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/pages/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pages/_home.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +66,9 @@
       <workItem from="1571853744802" duration="3241000" />
       <workItem from="1571886355292" duration="2391000" />
       <workItem from="1571892201960" duration="17729000" />
-      <workItem from="1571963425798" duration="14362000" />
+      <workItem from="1571963425798" duration="24043000" />
+      <workItem from="1572000333850" duration="1254000" />
+      <workItem from="1572002410946" duration="1513000" />
     </task>
     <servers />
   </component>

@@ -2,15 +2,32 @@ import React from 'react'
 import {Link} from "react-router-dom";
 
 
-const Feature = ({features, Card, feature}) => {
+const Feature = ({features, Card, feature, btnText}) => {
     let btnColor = '';
+    let btnBorderColor='';
+    let featureBorderColor='';
+    let Path=''
     console.log(feature);
     if (feature === 'note') {
         btnColor = 'Feature__action-link-note';
+        btnBorderColor= 'Feature__action-btn-note'
+        featureBorderColor = 'Feature-note'
+    }
+    else if (feature === 'plan'){
+        btnColor = 'Feature__action-link-plan';
+        btnBorderColor= 'Feature__action-btn-plan'
+        featureBorderColor = 'Feature-plan'
+
+    }
+    else if (feature === 'income') {
+        btnColor = 'Feature__action-link-income';
+        btnBorderColor= 'Feature__action-btn-income'
+        featureBorderColor = 'Feature-income'
+        Path='/incomes'
     }
 
     return (
-        <div className={'Feature'}>
+        <div className={`Feature ${featureBorderColor}`}>
             {
                 Card
             }
@@ -29,9 +46,9 @@ const Feature = ({features, Card, feature}) => {
                     }
                 </div>
             }
-            <button className={'Feature__action-btn'}>
-                <Link className={`Feature__action-link ${btnColor}`}  to={'/note'}>
-                    Action Now
+            <button className={`Feature__action-btn ${btnBorderColor}`}>
+                <Link className={`Feature__action-link ${btnColor}`}  to={`${Path}`}>
+                    {btnText}
                 </Link>
             </button>
         </div>
