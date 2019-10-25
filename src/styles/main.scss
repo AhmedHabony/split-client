@@ -1,6 +1,12 @@
 @import "base/base";
 @import "base/variables";
+
 @import "components/header";
 @import "components/welcome";
+@import "components/features";
+@import "components/feature";
+@import "components/btns";
+
 @import "layout/App";
+
 @import "pages/home";

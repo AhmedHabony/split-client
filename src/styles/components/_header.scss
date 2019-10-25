@@ -22,7 +22,7 @@
       border-radius: 1rem;
 
       &-note{
-        background-color: #83b582;
+        background-color: $note-color;
         &:hover{
           background-color: #6ea86d;
         }
@@ -32,7 +32,7 @@
 
       }
       &-plan{
-        background-color: #91d5a6;
+        background-color: $plan-color;
         &:hover{
           background-color: #6cc788;
         }
@@ -41,7 +41,7 @@
         }
       }
       &-income{
-        background-color: #be7575;
+        background-color: $income-color;
         &:hover{
           background-color: #b35e5e;
         }

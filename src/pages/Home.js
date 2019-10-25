@@ -7,7 +7,7 @@ class Home extends Component {
         return (
             <div className={'Home'}>
                 <Welcome />
-                <Features/>
+                <Features />
             </div>
         );
     }
