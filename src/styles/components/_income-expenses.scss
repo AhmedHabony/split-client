@@ -1,0 +1,31 @@
+.Income-Expenses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  position: absolute;
+  padding-top: 15rem ;
+  width: 100%;
+  background-color: transparent;
+  color: #ead2fd;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Cairo', sans-serif;
+
+
+
+  &__allExpenses {
+    &-text{
+      margin-bottom: -1rem;
+    }
+    &-number{
+      color: #ccc;
+      font-size: 2.5rem;
+      font-family: 'Ubuntu', sans-serif;
+      letter-spacing: 2px;
+      border-bottom: 1px darken(#fff, 40%) solid;
+      width: 100%;
+      padding: 0 .75rem;
+    }
+  }
+}

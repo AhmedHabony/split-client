@@ -1,0 +1,57 @@
+.AddForm{
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 17% 65% 50px;
+  justify-content: center;
+  grid-column-gap: 1rem;
+
+  &__input {
+    border: none;
+    border-bottom: 1px darken(#ccc, 15%) solid;
+    background-color: transparent;
+    padding: 0 0 .5rem 1rem;
+    color: #ead2fd;
+    font-size: 1.6rem;
+
+    //width: 70%;
+
+    &:focus{
+      outline: none;
+      padding: 0 0 .25rem 1rem;
+      border-bottom: 1px darken(#ccc, 5%) solid;
+
+
+    }
+
+
+    &::placeholder{
+      color: darken(#ccc, 15%);
+      text-align: center;
+    }
+
+  }
+
+  &__btn{
+    background-color: transparent;
+    border: 1px darken(#ccc, 15%) solid;
+    color: #ead2fd;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all .3s;
+    &:focus{
+      outline: none;
+    }
+    &:active{
+      border: 1px #fff solid;
+    }
+
+    &:hover{
+      border: 1px darken(#ccc, 5%) solid;
+      background-color: darken(#fff, 35%);
+      color: darken(#BE7575, 15%);
+
+    }
+
+  }
+
+}

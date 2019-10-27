@@ -1,0 +1,9 @@
+export const Types = {
+    ADD_NEW_INCOME: 'ADD_NEW_INCOME',
+    EDIT_INCOME: 'EDIT_INCOME',
+
+    ADD_NEW_EXPENSES: 'ADD_NEW_EXPENSES',
+    EDIT_EXPENSES: 'EDIT_EXPENSES',
+
+
+};

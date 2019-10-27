@@ -6,8 +6,16 @@
 @import "components/features";
 @import "components/feature";
 @import "components/btns";
+@import "components/income-expenses";
+@import "components/incomeManage";
+@import "components/expensesManage";
+@import "components/addValueInput";
+@import "components/incomes";
+@import "components/incomes-expenses-input";
+@import "components/InputIncomesExpenses";
 
 @import "layout/App";
 
 @import "pages/home";
-@import "pages/incomes";
+@import "pages/incomesPage";
+@import "components/totalIncomes";
