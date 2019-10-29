@@ -6,23 +6,24 @@ const Feature = ({features, Card, feature, btnText}) => {
     let btnColor = '';
     let btnBorderColor='';
     let featureBorderColor='';
-    let Path=''
-    console.log(feature);
+    let Path='';
     if (feature === 'note') {
         btnColor = 'Feature__action-link-note';
-        btnBorderColor= 'Feature__action-btn-note'
-        featureBorderColor = 'Feature-note'
+        btnBorderColor= 'Feature__action-btn-note';
+        featureBorderColor = 'Feature-note';
+        Path='/notes'
     }
     else if (feature === 'plan'){
         btnColor = 'Feature__action-link-plan';
-        btnBorderColor= 'Feature__action-btn-plan'
-        featureBorderColor = 'Feature-plan'
+        btnBorderColor= 'Feature__action-btn-plan';
+        featureBorderColor = 'Feature-plan';
+        Path='/to-do';
 
     }
     else if (feature === 'income') {
         btnColor = 'Feature__action-link-income';
-        btnBorderColor= 'Feature__action-btn-income'
-        featureBorderColor = 'Feature-income'
+        btnBorderColor= 'Feature__action-btn-income';
+        featureBorderColor = 'Feature-income';
         Path='/incomes'
     }
 

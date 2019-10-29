@@ -16,7 +16,7 @@ class Header extends Component {
                         <span className={'Header__features__link-name'}>Create A Note</span>
                     </Link>
 
-                    <Link to={'/note'}   className={'Header__features__link Header__features__link-plan'}>
+                    <Link to={'/to-do'}   className={'Header__features__link Header__features__link-plan'}>
                         <span className={'Header__features__link-name'} >Plan The Day</span>
                     </Link>
 

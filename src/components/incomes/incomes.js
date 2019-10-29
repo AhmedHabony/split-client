@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import IncomesForm from "./Incomes-Expenses_ManageForm";
+import IncomesExpensesManageForm from "./Incomes-Expenses_ManageForm";
 
 class Incomes extends Component {
     render() {
@@ -7,10 +7,14 @@ class Incomes extends Component {
         return (
             <div className={'Incomes__ExpensesContainer'}>
                 {
-                    allIncomes.map((income, i) => {
+                    allIncomes.map((incExp, i) => {
                         return (
-                            <div key={i}>
-                                <IncomesForm Value={income.value} desc={income.description} incExp={income}/>
+                            <div key={incExp.id}>
+                                <IncomesExpensesManageForm
+                                    key={i}
+                                    current={incExp.value}
+                                    desc={incExp.description}
+                                    incExp={incExp}/>
                             </div>
                         )
                     })

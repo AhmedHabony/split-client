@@ -1,5 +1,5 @@
 import {Types} from "../actions/types";
-import {editIncome} from "../utils/editIncome";
+import {editincome} from "../utils/editIncome";
 
 const INITIAL_STATE = {
     incomes: []
@@ -15,7 +15,7 @@ const incomesReducer = (state = INITIAL_STATE, action) =>{
         case Types.EDIT_INCOME:
             return {
                 ...state,
-                incomes: editIncome(state.incomes, action.payload.oldIncome, action.payload.editedIncome)
+                incomes: editincome(state.incomes, action.payload.oldIncome, action.payload.editedIncome)
             };
         default:
             return state

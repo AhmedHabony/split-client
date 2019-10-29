@@ -6,6 +6,7 @@
 @import "components/features";
 @import "components/feature";
 @import "components/btns";
+@import "components/totalIncomes";
 @import "components/income-expenses";
 @import "components/incomeManage";
 @import "components/expensesManage";
@@ -13,9 +14,15 @@
 @import "components/incomes";
 @import "components/incomes-expenses-input";
 @import "components/InputIncomesExpenses";
+@import "components/toDoHeader";
+@import "components/addToDo";
+@import "components/planTypesPopup";
+@import "components/calender";
+@import "components/plan";
+@import "components/planManage";
 
 @import "layout/App";
 
 @import "pages/home";
 @import "pages/incomesPage";
-@import "components/totalIncomes";
+@import "pages/toDo";

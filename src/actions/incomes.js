@@ -8,7 +8,7 @@ export const addNewIncome = income => (
         payload: income
     }
 );
-export const editIncome = (oldIncome, editedIncome) => (
+export const editincome = (oldIncome, editedIncome) => (
     {
         type: Types.EDIT_INCOME,
         payload: {oldIncome, editedIncome}

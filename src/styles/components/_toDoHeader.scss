@@ -1,0 +1,20 @@
+.ToDoHeader {
+  text-align: center;
+  padding-top: 1rem;
+
+  &__title-main{
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: darken(#91D5A6, 30%);
+    margin-top: 3rem;
+  }
+   &__title-sub{
+     font-size: 2.1rem;
+     color: darken(#91D5A6, 25%);
+     margin-top: .5rem;
+     letter-spacing: 2px;
+     font-family: 'Be Vietnam', sans-serif;
+   }
+
+}
