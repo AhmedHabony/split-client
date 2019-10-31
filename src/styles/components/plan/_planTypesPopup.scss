@@ -1,25 +1,25 @@
 .PlanTypesPopup {
   display: flex;
-  border-radius: 1rem;
+  //border-radius: 1rem;
   //background-color: #0f629b;
   flex-direction: column;
   text-align: center;
   //width: 40rem;
-  //background-color: transparent;
-  border: 3px darken($plan-color, 35%) solid;
+  background-color: darken(#91D5A6, 5%);
+  //border: 3px darken($plan-color, 35%) solid;
   margin-top: 4rem;
   //margin-left: 26%;
   position: absolute;
 
   &-btn{
-    border-radius: 2rem;
+    //border-radius: 2rem;
     transition: all .4s;
     width: 15rem;
     margin: .5rem;
     padding: .5rem 2rem;
     cursor: pointer;
     background-color: transparent;
-    border: 2px darken($plan-color, 35%) solid;
+    border: 1px darken($plan-color, 35%) solid;
     color: darken(#91D5A6, 30%);
     font-family: 'Roboto', sans-serif;
     letter-spacing: 1px;

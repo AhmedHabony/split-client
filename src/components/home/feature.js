@@ -17,7 +17,7 @@ const Feature = ({features, Card, feature, btnText}) => {
         btnColor = 'Feature__action-link-plan';
         btnBorderColor= 'Feature__action-btn-plan';
         featureBorderColor = 'Feature-plan';
-        Path='/to-do';
+        Path='/plan';
 
     }
     else if (feature === 'income') {

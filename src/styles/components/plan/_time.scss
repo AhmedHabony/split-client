@@ -1,0 +1,34 @@
+.Time {
+  margin-top: 1.1rem;
+  margin-right: 2rem;
+
+  &__input {
+    color: darken(#91D5A6, 40%);
+    padding: .5rem 0 .5rem 1rem;
+    background-color: darken(#91D5A6, 10%);
+    border: none;
+    //border-radius: 3rem;
+    font-size: 2.3rem;
+    font-family: 'Roboto', sans-serif;
+
+
+
+    &:hover{
+      background-color: darken(#91D5A6, 20%);
+
+    }
+    &:focus {
+      outline: none;
+    }
+
+
+    &-time {
+      margin-right: 1rem;
+    }
+
+    &-date {
+
+    }
+  }
+
+}

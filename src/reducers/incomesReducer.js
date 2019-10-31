@@ -1,5 +1,6 @@
 import {Types} from "../actions/types";
 import {editincome} from "../utils/editIncome";
+import {deletePlan} from "../utils/deletePlan";
 
 const INITIAL_STATE = {
     incomes: []
@@ -16,6 +17,11 @@ const incomesReducer = (state = INITIAL_STATE, action) =>{
             return {
                 ...state,
                 incomes: editincome(state.incomes, action.payload.oldIncome, action.payload.editedIncome)
+            };
+        case Types.DELETE_INC:
+            return {
+                ...state,
+                incomes: deletePlan(state.incomes, action.payload)
             };
         default:
             return state

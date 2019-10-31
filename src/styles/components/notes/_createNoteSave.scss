@@ -1,0 +1,26 @@
+.CreateNoteSave{
+  text-align: center;
+  align-self: center;
+  &__saveBtn {
+    //padding: 2rem 18rem;
+    font-size: 3rem;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    padding: 1rem 17rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-color: lighten(#067444, 4%);
+    color: darken(#fff, 13%);
+    transition: all .4s;
+
+    &:hover{
+      background-color: darken(#067444, 5%);
+      color: darken(#fff, 15%);
+    }
+
+
+
+  }
+}

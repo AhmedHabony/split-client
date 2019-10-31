@@ -14,3 +14,7 @@ export const editincome = (oldIncome, editedIncome) => (
         payload: {oldIncome, editedIncome}
     }
 );
+export const deleteIncome = incExp =>({
+    type: Types.DELETE_INC,
+    payload: incExp
+});

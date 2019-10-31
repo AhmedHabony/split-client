@@ -1,0 +1,25 @@
+.NoteSettingFontFamily{
+  //background-color: #FFB900;
+  text-align: center;
+  align-self: center;
+  &__select{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px darken($note-color, 1%) solid;
+    text-align: center;
+    font-size: 1.5rem;
+    color: lighten(#fff, 5%);
+    letter-spacing: 1.2px;
+    padding-left: 1rem;
+
+
+    option{
+      background-color: darken($note-color, 30%);
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+
+}

@@ -17,7 +17,7 @@ const reducerRoot = combineReducers(
     {
         incomes: incomesReducer,
         expenses: expensesReducer,
-        plan: planReducer
+        plan: planReducer,
     }
 );
 

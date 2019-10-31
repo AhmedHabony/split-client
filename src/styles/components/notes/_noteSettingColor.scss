@@ -1,0 +1,23 @@
+.NoteSettingColor {
+  //background-color: #8b4242;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  //grid-column-gap: 1rem;
+  &__colorContainer {
+    height: 4rem;
+    width: 4rem;
+    border: none;
+    cursor: pointer;
+
+    border-radius: 50%;
+    //span{
+    //  background-color: #00A4EF;
+    //  height: 4rem;
+    //  width: 4rem;
+    //}
+  }
+}

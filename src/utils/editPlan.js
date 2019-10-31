@@ -6,6 +6,7 @@ export const editPlan = (plans, oldPlan, newPLan) => {
 
     if(income){
         oldPlan.plan = newPLan.plan;
+        oldPlan.done = newPLan.done;
         return [...plans]
     }
 

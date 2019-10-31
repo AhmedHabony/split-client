@@ -34,3 +34,31 @@ export const editMainFocus = (oldPlan, newPlan)=> ({
     type: Types.EDIT_MAIN_FOCUS_PLAN,
     payload: {oldPlan, newPlan}
 });
+
+export const deleteToDo = plan => ({
+    type: Types.DELETE_TODO,
+    payload: plan
+});
+
+export const deleteMainFocus = plan => ({
+    type: Types.DELETE_MAIN_FOCUS,
+    payload: plan
+});
+
+export const addTime = PlaTime => ({
+    type: Types.ADD_TIME,
+    payload: PlaTime
+});
+
+
+
+
+
+
+
+
+
+
+
+
+

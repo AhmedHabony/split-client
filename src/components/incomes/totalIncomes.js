@@ -3,18 +3,20 @@ import {connect} from "react-redux";
 
 import {createStructuredSelector} from "reselect";
 import {allExpensesSelector, allIncomesSelector} from "../../utils/income-expenseSelector";
-import {totalIncomes_Expenses} from "../../utils/incomes-expensesCalculate";
+import {totalIncomes_Expenses, totalIncomes} from "../../utils/incomes-expensesCalculate";
 
 
 class TotalIncomes extends Component {
     render() {
         const{allIncomes, allExpenses} =this.props;
-        console.log(allExpenses, allIncomes, 'this')
         const total = totalIncomes_Expenses(allIncomes) - totalIncomes_Expenses(allExpenses);
+        let sign ='';
+        if(totalIncomes_Expenses(allIncomes) > totalIncomes_Expenses(allExpenses)) sign='+';
+        else if(totalIncomes_Expenses(allIncomes) < totalIncomes_Expenses(allExpenses)) sign='-';
         return (
             <div className={'TotalIncomes'}>
                 <p className={'TotalIncomes__text'}> Total Incomes</p>
-                <span className={'TotalIncomes__number'}> {total} <span className={'TotalIncomes__number-sign'}>$</span></span>
+                <span className={'TotalIncomes__number'}>{sign} {totalIncomes(total)} <span className={'TotalIncomes__number-sign'}>$</span></span>
             </div>
         );
     }

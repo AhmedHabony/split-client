@@ -1,0 +1,26 @@
+.NoteSettingFontStyle {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  //justify-items: center;
+  align-items: center;
+  grid-column-gap: 2rem;
+
+  &__select {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px darken($note-color, 1%) solid;
+    text-align: center;
+    font-size: 1.5rem;
+    color: lighten(#fff, 5%);
+    letter-spacing: 1.2px;
+    padding-left: 1rem;
+
+    option{
+      background-color: darken($note-color, 30%);
+    }
+    &:focus{
+      outline: none;
+    }
+
+  }
+}

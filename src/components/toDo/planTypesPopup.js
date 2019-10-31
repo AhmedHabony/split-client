@@ -4,22 +4,17 @@ import {planType} from "../../actions/plan";
 
 class PlanTypesPopup extends React.Component {
 
-    // state = {
-    //     type: 'to-Do'
-    // }
+
     handleOnClick = e => {
         const{title} =e.target;
         const{planType} = this.props;
         planType(title)
-
-
-    }
+    };
     render() {
         return (
             <div className={'PlanTypesPopup'}>
                 <button title={'toDo'} type={'toDo'} onClick={this.handleOnClick}  className={'PlanTypesPopup-btn'}>To-Do</button>
                 <button title={'main-focus'} onClick={this.handleOnClick} className={'PlanTypesPopup-btn'}>Main-Focus</button>
-                <button title={'wishes'} onClick={this.handleOnClick} className={'PlanTypesPopup-btn'}>Wishes</button>
             </div>
         )
     }

@@ -2,12 +2,9 @@ import React, {Component} from 'react';
 import DayPicker from 'react-day-picker'
 import {addCalendarDate} from "../../actions/plan";
 
+
 import 'react-day-picker/lib/style.css';
 import {connect} from "react-redux";
-
-
-
-
 
 
 class PlanCalender extends Component {
@@ -16,16 +13,16 @@ class PlanCalender extends Component {
         date: new Date()
     };
 
-    handleOnDayClick= day => {
+    handleOnDayClick = day => {
         const {addCalendarDate} = this.props;
 
         addCalendarDate(day)
-    }
+    };
+
     render() {
         return (
-            <div  >
-                {/*<Calendar onClickDay={this.handleOnClickDay}  calendarType={"US"} className={'Calender'}/>*/}
-                <DayPicker onDayClick={this.handleOnDayClick}  canChangeMonth={false} className={'Calender'} />
+            <div>
+                <DayPicker onDayClick={this.handleOnDayClick} canChangeMonth={false} className={'Calender'}/>
             </div>
         );
     }
@@ -33,5 +30,5 @@ class PlanCalender extends Component {
 
 const mapDispatchToState = dispatch => ({
     addCalendarDate: date => dispatch(addCalendarDate(date))
-})
-export default connect(null, mapDispatchToState) (PlanCalender);
+});
+export default connect(null, mapDispatchToState)(PlanCalender);

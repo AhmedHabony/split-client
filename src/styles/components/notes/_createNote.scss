@@ -1,0 +1,6 @@
+.CreateNote {
+  background-color: darken($note-color, 22%);
+  display: grid;
+  grid-template-rows: 10rem 1fr 8rem;
+  //margin: 2rem 2rem;
+}

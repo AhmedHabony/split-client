@@ -13,3 +13,8 @@ export const editExpenses = (oldExpense, editedExpense) => (
         payload: {oldExpense, editedExpense}
     }
 );
+
+export const deleteExpense = incExp =>({
+    type: Types.DELETE_EXP,
+    payload: incExp
+});

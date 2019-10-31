@@ -3,11 +3,11 @@ import PlanItem from "./planItem";
 
 class Plan extends Component {
     render() {
-        let planName = ''
+        let planName = '';
         const{type, plans} = this.props;
         if (type === 'toDo') planName = 'To-Do';
         else if (type === 'mainFocus') planName = 'Main Focus';
-        else if (type === 'wishes') planName = 'Wishes';
+        // else if (type === 'wishes') planName = 'Wishes';
 
 
         return (

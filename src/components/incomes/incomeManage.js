@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {createStructuredSelector} from 'reselect'
 import uuid from 'uuid'
 
-import {totalIncomes_Expenses} from "../../utils/incomes-expensesCalculate";
+import {totalIncomes_Expenses, totalIncomes} from "../../utils/incomes-expensesCalculate";
 import InputAddNew from "../inputs/Input-AddNew";
 import {addNewIncome} from "../../actions/incomes";
 import Incomes from "./incomes";
@@ -24,6 +24,7 @@ class IncomeManage extends Component {
         const newIncome = {
             id: uuid(),
             date: Date.now(),
+            type: 'income',
             value: income,
             description
         };
@@ -42,7 +43,7 @@ class IncomeManage extends Component {
             <div className={'IncomeManage'}>
                 <div className={'Income-Expenses__allExpenses'}>
                     <p className={'Income-Expenses__allExpenses-text'}>Incomes</p>
-                    <span className={'Income-Expenses__allExpenses-number'}>+ {totalIncomes_Expenses(allIncomes)}<span
+                    <span className={'Income-Expenses__allExpenses-number'}>+ {totalIncomes(totalIncomes_Expenses(allIncomes))}<span
                         className={'TotalIncomes__number-sign'}>$</span></span>
                 </div>
                 <form className={'AddForm'} onSubmit={this.handleOnSubmit}>

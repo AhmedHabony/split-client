@@ -4,9 +4,9 @@ $green-color-main: #7FBA00;
 $yellow-color-main: #FFB900;
 $blue-color-main: #00A4EF;
 
-$note-color: #83b582;
-$note-color-dark: #63a262;
-$note-color-darker: #4f834e;
+$note-color: #64ccda;
+$note-color-dark: darken(#64ccda, 15%);
+$note-color-darker: darken(#64ccda, 25%);
 
 $plan-color: #91d5a6;
 $plan-color-dark: #6cc788;

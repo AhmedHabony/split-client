@@ -12,11 +12,11 @@ class Header extends Component {
 
                 <div className={'Header__features'}>
 
-                    <Link to={'/note'} className={'Header__features__link Header__features__link-note '}>
+                    <Link to={'/notes'} className={'Header__features__link Header__features__link-note '}>
                         <span className={'Header__features__link-name'}>Create A Note</span>
                     </Link>
 
-                    <Link to={'/to-do'}   className={'Header__features__link Header__features__link-plan'}>
+                    <Link to={'/plan'}   className={'Header__features__link Header__features__link-plan'}>
                         <span className={'Header__features__link-name'} >Plan The Day</span>
                     </Link>
 

@@ -30,4 +30,9 @@ export const getAllWishes = createSelector(
     plan => plan.wishes
 )
 
+export const getTime = createSelector(
+    [getPlan],
+    plan => plan.PlanTime
+);
+
 

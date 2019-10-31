@@ -1,12 +1,14 @@
 import {Types} from "../actions/types";
 import {editPlan} from "../utils/editPlan";
+import {deletePlan} from "../utils/deletePlan";
 
 const INITIAL_STATE = {
-    type: 'to-Do',
+    type: 'toDo',
     toDos:[],
     mainFocus: [],
     wishes: [],
-    calendarDate: ''
+    calendarDate: '',
+    PlanTime: ''
 };
 
 
@@ -46,8 +48,24 @@ const planReducer = (state = INITIAL_STATE, action) => {
         case Types.EDIT_MAIN_FOCUS_PLAN:
             return {
                 ...state,
-                mainFocus: editPlan(state.toDos, action.payload.oldPlan, action.payload.newPlan)
+                mainFocus: editPlan(state.mainFocus, action.payload.oldPlan, action.payload.newPlan)
             };
+        case Types.DELETE_TODO:
+            return {
+                ...state,
+                toDos: deletePlan(state.toDos, action.payload)
+            };
+        case Types.DELETE_MAIN_FOCUS:
+            return {
+                ...state,
+                mainFocus: deletePlan(state.mainFocus, action.payload)
+            };
+        case Types.ADD_TIME:
+            return {
+                ...state,
+                PlanTime: action.payload
+            };
+
 
         default:
             return state

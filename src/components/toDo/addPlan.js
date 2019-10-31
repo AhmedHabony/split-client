@@ -4,12 +4,13 @@ import {createStructuredSelector} from "reselect";
 import uuid from 'uuid'
 
 
-import {getCalendarDate, planTypeSelector} from "../../utils/planSelectors";
+import {getCalendarDate, getTime, planTypeSelector} from "../../utils/planSelectors";
 import {ReactComponent as Menu} from './../../assets/menu.svg'
 import {ReactComponent as DateIcon} from './../../assets/date.svg'
 import PlanTypesPopup from "./planTypesPopup";
 import PlanCalender from './calendar'
 import {addToToDo, addToMAinFocus, addToToWishes} from './../../actions/plan'
+import Time from "./time";
 
 
 class AddPlan extends Component {
@@ -60,10 +61,13 @@ class AddPlan extends Component {
 
     handleOnSubmit = e =>{
         e.preventDefault();
+        if (this.state.inputValue.length <= 0) return;
         const {inputValue} = this.state;
-        const {type, addToToDo, addToMAinFocus, addToToWishes, calendarDate} = this.props;
+        const {type, addToToDo, addToMAinFocus, addToToWishes, calendarDate, getTime} = this.props;
         const APlan = {
             id: uuid(),
+            done: false,
+            planTime: getTime || `${new Date().getHours()}:${new Date().getMinutes()}`,
             date: Date.now() >= calendarDate ? Date.now() : calendarDate,
             plan: inputValue
         };
@@ -72,17 +76,20 @@ class AddPlan extends Component {
         else if (type === 'main-focus') addToMAinFocus(APlan);
         else if (type === 'wishes') addToToWishes(APlan)
 
+        this.setState({inputValue: ''})
+
 
     };
     render() {
         const {type} = this.props;
         let placeHolder = '';
         if (type === 'toDo') placeHolder = 'Add to To-Do';
-        if (type === 'wishes') placeHolder = 'Add to Wishes';
+        // if (type === 'wishes') placeHolder = 'Add to Wishes';
         if (type === 'main-focus') placeHolder = 'Add to Main Focus';
         return (
             <div>
                 <div className={'AddToDo'}>
+                    <Time />
                     <div className={'AddToDo__date'}>
                         <DateIcon onClick={this.handleDateIconClick} className={'AddToDo__date-icon'}/>
                         <div ref={node => {
@@ -92,7 +99,6 @@ class AddPlan extends Component {
                                 this.state.calenderPopup ? <PlanCalender view={'month'}/> : ''
                             }
                         </div>
-
                     </div>
                     <div>
                         <div ref={node => {
@@ -125,7 +131,8 @@ class AddPlan extends Component {
 
 const mapStateToProps = createStructuredSelector({
     type: planTypeSelector,
-    calendarDate: getCalendarDate
+    calendarDate: getCalendarDate,
+    getTime: getTime
 });
 const mapDispatchToProps = dispatch => ({
     addToToDo: toDo => dispatch(addToToDo(toDo)),
