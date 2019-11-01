@@ -6,21 +6,23 @@
   justify-items: center;
   //background-color: transparent;
   text-align: center;
+  button{
 
-  &-icon {
+    &:focus{
+      outline: none;
+    }
   }
-
   & > * {
     background-color: transparent;
     align-self: center;
     justify-items: center;
     justify-content: center;
-    fill: darken(#fff, 15%);
+    fill: darken(#fff, 35%);
     border: none;
     width: 4rem;
     cursor: pointer;
     &:hover{
-      fill: darken(#fff, 30%);
+      fill: darken(#fff, 20%);
     }
   }
 }

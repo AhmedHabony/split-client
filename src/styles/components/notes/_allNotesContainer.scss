@@ -1,0 +1,20 @@
+.AllNotesContainer {
+  background-color: darken($note-color, 20%);
+  display: grid;
+  grid-template-columns: 1fr;
+  //height: 50rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  justify-content: center;
+  &::-webkit-scrollbar{
+    width: 20px;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-color: darken($note-color, 10%);
+    border-radius: 3rem;
+  }
+  &::-webkit-scrollbar-thumb:hover{
+    background-color: darken($note-color, 40%);
+  }
+
+}

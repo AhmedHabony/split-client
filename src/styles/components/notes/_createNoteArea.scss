@@ -1,9 +1,10 @@
 .CreateNoteArea {
+  height: 100%;
   &__textArea{
     resize: none;
     width: 100%;
     min-height: 100%;
-    max-height: 100%;
+    //max-height: 100%;
     background-color: darken($note-color, 25%);
     border: none;
     padding: 2rem 2rem;

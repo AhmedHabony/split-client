@@ -1,47 +1,64 @@
 import React, {Component} from 'react';
 
+import {addFontSize, addFontStyle} from "../../actions/note";
+import {connect} from "react-redux";
+import {createStructuredSelector} from "reselect";
+import {fontSizeSelector, fontStyleSelector} from "../../utils/noteSelectors";
+
 class NoteSettingFontStyle extends Component {
 
     style = {
         fontSize: '',
         fontStyle: ''
     };
-    onSizeChange = e => {
-        this.setState({fontSize: e.target.value})
+    onSizeChange = async e => {
+        await this.setState({fontSize: e.target.value});
+        const {addFontSize} = this.props;
+        addFontSize(this.state.fontSize)
     };
-    onSizeStyle = e => {
-        this.setState({fontStyle: e.target.value})
+    onStyleChange = async e => {
+        await this.setState({fontStyle: e.target.value});
+        const {addFontStyle} = this.props;
+        addFontStyle(this.state.fontStyle)
+
     };
     render() {
+        const {fontSize, fontStyle} = this.props;
         return (
             <div className={'NoteSettingFontStyle'}>
+                <select defaultValue={fontSize} onChange={this.onSizeChange}  className={'NoteSettingFontStyle__select NoteSettingFontStyle__select__size'}>
+                    <option value={'1.8'}>18</option>
+                    <option value={'2'}>20</option>
+                    <option value={'2.2'}>22</option>
+                    <option value={'2.4'}>24</option>
+                    <option  value={'2.6'}>26</option>
+                    <option value={'2.8'}>28</option>
+                    <option value={'3.6'}>36</option>
+                    <option value={'4.8'}>48</option>
+                    <option value={'7.8'}>78</option>
 
-                <select onChange={this.onSizeChange}  className={'NoteSettingFontStyle__select NoteSettingFontStyle__select__size'}>
-                    <option value={'11'}>11</option>
-                    <option value={'12'}>12</option>
-                    <option value={'14'}>14</option>
-                    <option value={'16'}>16</option>
-                    <option value={'18'}>18</option>
-                    <option value={'20'}>20</option>
-                    <option value={'22'}>22</option>
-                    <option value={'24'}>24</option>
-                    <option value={'26'}>26</option>
-                    <option value={'28'}>28</option>
-                    <option value={'36'}>36</option>
-                    <option value={'48'}>48</option>
-                    <option value={'72'}>72</option>
                 </select>
 
-                <select onChange={this.onSizeStyle} className={'NoteSettingFontStyle__select NoteSettingFontStyle__select__style'}>
+                <select defaultValue={fontStyle} onChange={this.onStyleChange} className={'NoteSettingFontStyle__select NoteSettingFontStyle__select__style'}>
                     <option style={{fontStyle: 'normal'}} value={'normal'}>Regular</option>
                     <option style={{fontStyle: 'italic'}} value={'italic'}>Italic</option>
                     <option style={{fontStyle: 'oblique'}} value={'oblique'}>Oblique</option>
                     <option style={{fontWeight: 'bold'}} value={'bold'}>Bold</option>
-                    <option style={{fontWeight: 'light'}} value={'light'}>Light </option>
+                    <option style={{fontWeight: 'light'}} value={'100'}>Light </option>
                 </select>
             </div>
         );
     }
 }
 
-export default NoteSettingFontStyle;
+const mapDispatchToProps = dispatch =>({
+    addFontSize: fontSize => dispatch(addFontSize(fontSize)),
+    addFontStyle: fontStyle => dispatch(addFontStyle(fontStyle))
+
+});
+const mapStateToProps = createStructuredSelector({
+    fontSize: fontSizeSelector,
+    fontStyle: fontStyleSelector
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(NoteSettingFontStyle);

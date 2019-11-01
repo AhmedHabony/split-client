@@ -1,4 +1,6 @@
 .AllNotes {
   background-color: darken($note-color, 15%);
-  
+  display: grid;
+  grid-auto-rows: 4rem 6rem 540px;
+
 }

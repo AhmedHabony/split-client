@@ -1,0 +1,28 @@
+.AllNotesSearchBox{
+  background-color: darken($note-color, 10%);
+  display: flex;
+  &__form {
+    align-self: center;
+    width: 100%;
+    &__input{
+      background-color: transparent;
+      width: 100%;
+      border: none;
+      text-align: center;
+      border-bottom: 1px darken($note-color, 20%)  solid;
+      font-size: 2rem;
+      color: darken(#fff, 8%);
+      letter-spacing: 1.5px;
+      padding-bottom: .5rem;
+
+      &::placeholder{
+        color: darken(#fff, 20%);
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+
+
+}

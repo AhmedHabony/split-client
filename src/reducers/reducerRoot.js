@@ -4,13 +4,14 @@ import storage from 'redux-persist/lib/storage'
 import incomesReducer from "./incomesReducer";
 import expensesReducer from "./expensesReducer";
 import planReducer from "./planReducer";
+import noteReducer from "./noteReducer";
 
 
 
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['incomes', 'expenses', 'plan']
+    whitelist: ['incomes', 'expenses', 'plan', 'note']
 };
 
 const reducerRoot = combineReducers(
@@ -18,6 +19,7 @@ const reducerRoot = combineReducers(
         incomes: incomesReducer,
         expenses: expensesReducer,
         plan: planReducer,
+        note: noteReducer
     }
 );
 
