@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {addNewNote} from "../../actions/note";
 import {connect} from "react-redux";
 import {createStructuredSelector} from "reselect";
+import uuid from 'uuid'
 import {
     fontAlignSelector,
     fontColorSelector,
@@ -17,6 +18,7 @@ class CreateNoteSave extends Component {
         const {fontFamily, fontSize, fontStyle, fontAlign, fontColor, text, addNewNote} = this.props
         if (text.length === 0) return;
         const note = {
+            id: uuid(),
             note: text,
             fontFamily,
             fontSize,

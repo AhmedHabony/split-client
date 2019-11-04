@@ -3,6 +3,7 @@
     height: 15rem;
     margin: 1.5rem;
     background-color: darken($note-color, 25%);
+    z-index: 1;
     cursor: pointer;
 
     &__header {
@@ -15,6 +16,57 @@
     &__noteSummary{
         font-size: 2rem;
         margin-top: .25rem;
+    }
+
+}
+.NoteItem__container{
+    position: relative;
+
+}
+.NoteItem-popup {
+    //top: 3rem;
+    text-align: center;
+    height: 15rem;
+    width: 93.3%;
+    margin: 1.5rem;
+    opacity: .9;
+    background-color: darken($note-color, 15%);
+    top: 0;
+    color: #7a0060;
+    position: absolute;
+    z-index: 999;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 4rem 4rem 4rem;
+        grid-column-gap: 2rem;
+        justify-content: space-around;
+        margin-top: 4rem;
+        &-prop{
+
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            justify-items: center;
+           justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            span{
+                font-size: 1.7rem;
+                font-family: 'Be Vietnam', sans-serif;
+                color: darken(#fff, 15%);
+                letter-spacing: 1.3px;
+                transition: all .3s;
+                font-weight: bold;
+
+                &:hover{
+                    color: darken(#fff, 30%);
+                }
+            }
+            &-icon{
+                width: 3rem;
+                height: auto;
+            }
+        }
     }
 
 }

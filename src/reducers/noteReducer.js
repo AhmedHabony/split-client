@@ -1,4 +1,5 @@
 import {Types} from "../actions/types";
+import {editNote, deleteNote} from "./../utils/noteItemControllls"
 
 const INITIAL_STATE = {
     text: "",
@@ -7,7 +8,10 @@ const INITIAL_STATE = {
     fontStyle: '',
     fontAlign: {},
     fontColor: '',
-    notes: []
+    notes: [],
+    openedNote: [],
+    isNoteOpen: false,
+    newNoteText: ''
 };
 
 const noteReducer = (state = INITIAL_STATE, action) => {
@@ -50,6 +54,28 @@ const noteReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 fontColor: action.payload
             };
+        case Types.OPEN_NOTE:
+            return {
+                ...state,
+                openedNote: action.payload
+            };
+        case Types.IS_NOTE_OPEN:
+            return {
+                ...state,
+                isNoteOpen: action.payload
+            };
+         case Types.EDIT_NOTE:
+            return {
+                ...state,
+                notes: editNote(state.notes, action.payload.oldNote, action.payload.newNote )
+            };
+         case Types.DELETE_NOTE:
+            return {
+                ...state,
+                notes: deleteNote(state.notes,  action.payload)
+            };
+
+
         default:
             return state;
     }

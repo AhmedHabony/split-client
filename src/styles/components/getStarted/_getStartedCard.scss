@@ -1,0 +1,178 @@
+.GetStartedCard {
+  align-self: center;
+  justify-self: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 80rem;
+  box-shadow: 10px 10px 10px #000;
+  &__logo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    &-icon {
+      width: 4rem
+    }
+  }
+
+  &__mainTitle {
+    font-size: 2.2rem;
+    color: lighten(#000, 25%);
+    letter-spacing: .5px;
+    font-family: "Roboto", sans-serif;
+
+    &-special {
+      font-size: 2.7rem;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__signUp {
+    display: grid;
+    grid-template-columns: 62% 38%;
+
+    &-withEmail {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+
+      &__form {
+        align-items: center;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-content: center;
+        grid-row-gap: 1.5rem;
+        border-right: 1px darken(#fff, 30%) solid;
+
+        &-name {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 1rem;
+          //flex-direction: column;
+          //justify-content: start;
+          span {
+            display: grid;
+            grid-column-gap: 2rem;
+          }
+        }
+
+        &-single {
+          display: grid;
+          grid-column-gap: 2rem;
+
+        }
+      }
+    }
+
+    &-withOtherOptions {
+      margin-top: 10rem;
+      display: grid;
+      grid-auto-rows: 5rem 5rem 5rem;
+      grid-template-columns: 85%;
+      justify-content: center;
+      grid-row-gap: 2rem;
+
+
+      &-btn{
+        border: none;
+        border-radius: 3px;
+        color: #fff;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 1.5rem;
+        letter-spacing: 1.2px;
+        transition: all .4s;
+        cursor: pointer;
+
+        &:focus{
+          outline: none;
+        }
+
+
+        &-icon{
+          width: 2rem;
+          justify-self: start;
+          margin-left: 1rem;
+          margin-right: 1.5rem;
+
+          //fill: #000;
+
+        }
+        &-facebook{
+          background-color: #4267B2;
+
+          &:hover{
+            background-color: #304a80;
+          }
+        }
+        &-google{
+          background-color: #c71610;
+
+          &:hover{
+            background-color: #a8130d;
+          }
+        }
+        &-twitter{
+          background-color:  #38A1F3;
+
+          &:hover{
+            background-color: #0d80da;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.formLabels {
+  justify-self: flex-start;
+  color: lighten(#000, 19%);
+  letter-spacing: .5px;
+  margin-bottom: 2px;
+  font-size: 1.4rem;
+  font-family: 'Be Vietnam', sans-serif;
+  font-weight: bold;
+  padding-left: .5rem;
+}
+
+.getStartInput {
+  font-size: 1.5rem;
+  padding: 1rem .25rem;
+  background-color: darken(#fff, 15%);
+  border: none;
+
+
+  &::placeholder {
+    padding-left: .25rem;
+  }
+}
+
+.signUpBtn {
+  padding: 1.5rem;
+  font-size: 1.7rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  margin-top: 2rem;
+  background-color: #3E78AD;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: all .4s;
+  box-shadow: 2.5px 2.5px 7px #000;
+  overflow: hidden;
+
+  &:hover {
+    background-color: #315e87;
+    color: darken(#fff, 10%);
+    box-shadow: 1px 1px 7px #000;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+
+  }
+}

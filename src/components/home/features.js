@@ -29,20 +29,20 @@ const Features = (props) => {
     return (
         <div className={`Features `}>
             <Feature
-                features={ [[Free, 'Free'], [Save, 'All Save'], [Edit, 'Edit And Check'], [Secure, 'Secure']] }
-                Card={<NoteCard />}
+                features={ [[Free, 'Free'], [Save, 'All Save'], [Edit, 'Edit, Check'], [Secure, 'Secure']] }
+                Card={<NoteCard className={'Feature-headerPic'} />}
                 btnText={'Note Now'}
                 feature={'note'}
             />
             <Feature
-                features={[[Easy, 'Easy'], [Productive, 'productive'], [Options, 'With Many Options'], [Reminder, 'Reminder']]}
-                Card={<ToDoCard />}
+                features={[[Easy, 'Easy'], [Productive, 'productive'], [Options, 'Many Options'], [Reminder, 'Reminder']]}
+                Card={<ToDoCard className={'Feature-headerPic'} />}
                 btnText={'Plan The Day'}
                 feature={'plan'}
             />
             <Feature
-                features={[[Manages, 'Mange Incomes'], [Ideas, 'New Ideas'], [Smooth, 'Smooth Management']]}
-                Card={<IncomeCard />}
+                features={[[Manages, 'Mange'], [Ideas, 'New Ideas'], [Smooth, 'Smooth']]}
+                Card={<IncomeCard className={'Feature-headerPic'} />}
                 btnText={'Manage Incomes'}
                 feature={'income'}
 

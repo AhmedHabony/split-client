@@ -5,6 +5,8 @@ import incomesReducer from "./incomesReducer";
 import expensesReducer from "./expensesReducer";
 import planReducer from "./planReducer";
 import noteReducer from "./noteReducer";
+import signInReducer from './signInReducer'
+import notePortalsReducer from "./notePortalsReducer";
 
 
 
@@ -19,7 +21,9 @@ const reducerRoot = combineReducers(
         incomes: incomesReducer,
         expenses: expensesReducer,
         plan: planReducer,
-        note: noteReducer
+        note: noteReducer,
+        signIn: signInReducer,
+        notePortals: notePortalsReducer
     }
 );
 

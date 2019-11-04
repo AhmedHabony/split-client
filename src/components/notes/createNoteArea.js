@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {createStructuredSelector} from "reselect";
-import TextareaAutosize from 'react-textarea-autosize';
 
 import {
     fontAlignSelector,
@@ -8,7 +7,8 @@ import {
     fontFamilySelector,
     fontSizeSelector,
     fontStyleSelector,
-    noteTextSelector
+    noteTextSelector,
+    openedNoteSelector
 } from './../../utils/noteSelectors'
 import {addNoteText} from "../../actions/note";
 import {connect} from "react-redux";
@@ -16,7 +16,7 @@ import {connect} from "react-redux";
 class CreateNoteArea extends Component {
 
     state ={
-        nodeText: this.props.text
+        nodeText:  this.props.text
     };
     handleOnChange = async e => {
         await this.setState({nodeText: e.target.value});
@@ -30,6 +30,7 @@ class CreateNoteArea extends Component {
         if(fontAlign) text_align = fontAlign.fontTextAlign;
         if(fontSize) font_Size = `${fontSize}rem`;
 
+        console.log(this.props.openedNote.note);
         return (
             <div className={'CreateNoteArea'}>
                 <textarea
@@ -57,7 +58,8 @@ const mapStateToProps = createStructuredSelector({
     fontStyle: fontStyleSelector,
     fontAlign: fontAlignSelector,
     fontColor: fontColorSelector,
-    text: noteTextSelector
+    text: noteTextSelector,
+    openedNote: openedNoteSelector
 });
 
 const mapDispatchToProps = dispatch => ({

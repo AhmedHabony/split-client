@@ -35,3 +35,35 @@ export const addFontColor = fontColor => ({
    payload: fontColor
 });
 
+export const openNote = openedNote => ({
+   type: Types.OPEN_NOTE,
+   payload: openedNote
+});
+
+export const isNoteOpened = isOpen => ({
+   type: Types.IS_NOTE_OPEN,
+   payload: isOpen
+});
+
+export const isEditOpened = isEdit => ({
+   type: Types.IS_EDIT_OPEN,
+   payload: isEdit
+});
+export const isDeleteOpened = isDelete => ({
+   type: Types.IS_DELETE_OPEN,
+   payload: isDelete
+});
+
+
+export const editNote = (oldNote, newNote) => ({
+   type: Types.EDIT_NOTE,
+   payload: {oldNote, newNote}
+});
+
+export const deleteNote =  deleteNote => ({
+   type: Types.DELETE_NOTE,
+   payload: deleteNote
+});
+
+
+

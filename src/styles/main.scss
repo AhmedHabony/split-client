@@ -1,3 +1,5 @@
+@import "abstracts/mixins";
+
 @import "base/base";
 @import "base/variables";
 
@@ -38,6 +40,13 @@
 @import "components/notes/allNotesSearchBox";
 @import "components/notes/allNotesContainer";
 @import "components/notes/noteItem";
+@import "components/signIn/signInCard";
+@import "components/signIn/signInContainer";
+@import "components/getStarted/getStartedCard";
+
+@import "portals/openNote";
+@import "portals/editNote";
+@import "portals/deleteNote";
 
 @import "layout/App";
 
@@ -45,3 +54,4 @@
 @import "pages/incomesPage";
 @import "pages/toDo";
 @import "pages/notes";
+@import "pages/getStarted";

@@ -1,0 +1,14 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 145">
+    <defs>
+        <style>
+            .cls-1{fill:#ffb900;}.cls-1,.cls-2,.cls-3,.cls-4{stroke:#c6cbef;}.cls-1,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6{stroke-miterlimit:10;}.cls-2{fill:#f25022;}.cls-3{fill:#7fba00;}.cls-4{fill:#00a4ef;}.cls-5{fill:none;stroke:#000;}.cls-6{fill:#207561;stroke:#00faac;}
+        </style>
+    </defs>
+    <title>Logo.v2</title>
+    <path class="cls-1" d="M143.5,99v45l-45,.5c-26,0-26-36-26-36l35-37S143.5,71.5,143.5,99Z"/>
+    <path class="cls-2" d="M72.5,36.5l-36,36s-36,0-36-27V.5h45C71.5.5,72.5,36.5,72.5,36.5Z"/>
+    <path class="cls-3" d="M143.5.5v45c0,27-36,26-36,26l-35-35c0-36,26-36,26-36Z"/>
+    <path class="cls-4" d="M72.5,108.5c0,36-27,36-27,36H.5v-45s0-27,36-27Z"/>
+    <path class="cls-5" d="M34.5,62.5"/>
+    <polygon class="cls-6" points="107.5 71.5 72.5 108.5 36.5 72.5 72.5 36.5 107.5 71.5"/>
+</svg>

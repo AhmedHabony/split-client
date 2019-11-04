@@ -1,0 +1,258 @@
+.SignInContainer {
+  width: 50rem;
+  height: 50rem;
+  border-radius: 9px;
+  //background-color: #254176;
+
+  &__header {
+    font-size: 2.8rem;
+    color: darken(#fff, 5%);
+    //font-weight: 500;
+    letter-spacing: 1.9px;
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+
+    h3 {
+      //line-height: 1.9;
+    }
+
+    &-logo {
+      margin-bottom: 1rem;
+      //display: block;
+    }
+
+    &-icon {
+      width: 4rem;
+    }
+
+  }
+
+  &__form {
+    margin-top: 4rem;
+    text-align: center;
+
+    input {
+      //text-align: center;
+      width: 70%;
+      padding: .5rem 1rem;
+      margin: 3rem;
+      background-color: transparent;
+      border: none;
+      border-bottom: 3px #207561 solid;
+      font-size: 1.8rem;
+      color: darken(#fff, 20);
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: darken(#fff, 40%);
+        padding-bottom: 1rem;
+
+      }
+    }
+
+  }
+
+  &__close {
+    width: 100%;
+    text-align: end;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: -1rem;
+    height: 2rem;
+
+    &-icon {
+      cursor: pointer;
+      width: 1.5rem;
+      fill: darken(#254176, 10%);
+      transition: all .2s;
+
+      &:hover {
+        fill: red;
+        width: 1.8rem;
+      }
+    }
+  }
+
+  &__btn {
+    //width: 6rem;
+    background-color: transparent;
+    font-size: 2.5rem;
+    padding: 1.4rem .5rem;
+    border-radius: 6rem;
+    color: #0096ba;
+    border: 1px #0096ba solid;
+    margin-top: 3rem;
+    cursor: pointer;
+
+
+    span {
+      padding: 1.1rem 8rem;
+      border-radius: 6rem;
+      transition: all .4s;
+      letter-spacing: 1.7px;
+      font-family: "Roboto", sans-serif;
+      //background-color: red;
+
+      //border: 1px #0096ba solid;
+
+      &:hover {
+        color: #fff;
+        background-color: darken(#0096ba, 8%);
+      }
+    }
+  }
+}
+
+// Styles by page Main Colors
+.signCardStyles-incomes {
+  background-color: #743737;
+
+  &-close-icon {
+    fill: darken(#743737, 10%);
+
+    &:hover {
+      fill: #6f0e01;
+      width: 1.8rem;
+    }
+  }
+
+  &-form {
+    input{
+      border-bottom: 1px lighten(#743737, 11%) solid;
+
+      &::placeholder {
+        color: lighten(#743737, 20%);
+
+      }
+    }
+  }
+
+  &-btn {
+    color: lighten(#743737, 30%);
+    border: 1px lighten(#743737, 30%) solid;
+
+    span{
+      &:hover {
+        color: darken(#fff, 9%);
+        background-color: lighten(#743737, 10%);
+      }
+    }
+  }
+}
+
+.signCardStyles-notes {
+  //background-color: #54be74;
+  background-color: #1b6771;
+
+  &-close-icon {
+
+    fill: darken(#1b6771, 10%);
+    transition: all .2s;
+
+    &:hover {
+      fill: #6f0e01;
+    }
+  }
+  &-form {
+    input{
+      border-bottom: 1px lighten(#1b6771, 11%) solid;
+      &::placeholder {
+        color: lighten(#1b6771, 20%);
+
+
+      }
+    }
+  }
+
+  &-btn {
+    color: lighten(#1b6771, 30%);
+    border: 1px lighten(#1b6771, 30%) solid;
+
+    span{
+      &:hover {
+        color: darken(#fff, 9%);
+        background-color: lighten(#1b6771, 10%);
+      }
+    }
+  }
+
+}
+
+.signCardStyles-plan {
+  background-color: #34884e;
+
+  &-close-icon {
+
+    fill: darken(#34884e, 10%);
+    transition: all .2s;
+
+    &:hover {
+      fill: #6f0e01;
+    }
+  }
+  &-form {
+    input{
+      border-bottom: 1px lighten(#34884e, 11%) solid;
+      &::placeholder {
+        color: lighten(#34884e, 20%);
+
+
+      }
+    }
+  }
+
+  &-btn {
+    color: lighten(#34884e, 30%);
+    border: 1px lighten(#34884e, 30%) solid;
+
+    span{
+      &:hover {
+        color: darken(#fff, 9%);
+        background-color: lighten(#34884e, 10%);
+      }
+    }
+  }
+}
+.signCardStyles-home {
+  background-color: #7a0060;
+
+  &-close-icon {
+
+    fill: darken(#7a0060, 10%);
+    transition: all .2s;
+
+    &:hover {
+      fill: #6f0e01;
+    }
+  }
+  &-form {
+    input{
+      border-bottom: 1px lighten(#7a0060, 11%) solid;
+      &::placeholder {
+        color: lighten(#7a0060, 20%);
+
+
+      }
+    }
+  }
+
+  &-btn {
+    color: lighten(#7a0060, 30%);
+    border: 1px lighten(#7a0060, 30%) solid;
+
+    span{
+      &:hover {
+        color: darken(#fff, 9%);
+        background-color: lighten(#7a0060, 10%);
+      }
+    }
+  }
+}

@@ -12,6 +12,9 @@
   &__features {
     display: flex;
     justify-content: space-between;
+    margin-left: 160px;
+
+
     &__link{
       margin: 0 .25rem;
       text-decoration: none;
@@ -19,12 +22,11 @@
       color: #FDF9F3;
       background-color: #00c8d7;
       transition: .4s;
-      border-radius: 1rem;
-
+      border-radius: 3px;
       &-note{
         background-color: $note-color;
         &:hover{
-          background-color: #6ea86d;
+          background-color: darken($note-color, 10%);
         }
         &:active{
           background-color: #4f834e;
@@ -56,24 +58,40 @@
       &-name{
         font-size: 1.8rem;
         font-family: 'Roboto', sans-serif;
+
+        @include respond(tab-land) {
+          font-size: 1.2rem;
+        }
         letter-spacing: 1px;
       }
     }
   }
   &__sign{
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     &__link{
+      color: #269aea;
       margin: 0 .5rem;
       text-decoration: none;
       border: 2px #269aea solid;
       padding: 1.4rem  .3rem;
       background-color: transparent;
       border-radius: 110rem;
+      cursor: pointer;
+      letter-spacing: 1px;
+      font-weight: bold;
+
+      &:focus{
+        outline: none;
+      }
       &-name{
         border-radius: 110rem;
         font-size: 1.8rem;
+        @include respond(tab-land) {
+          font-size: 1.2rem;
+        }
         font-family: 'Roboto', sans-serif;
         letter-spacing: 1px;
         padding: 1.1rem 2.5rem;

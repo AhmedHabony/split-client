@@ -11,10 +11,9 @@ class AllNotesContainer extends Component {
         const {notes} = this.props;
         console.log(notes);
         let newNotesArray = [];
-        for (let i=notes.length-1 ; i >= 0 ; i --){
+        for (let i=notes.length-1; i >= 0 ; i --){
             newNotesArray.push(notes[i])
         }
-        console.log(newNotesArray)
         return (
             <div className={'AllNotesContainer'}>
                 {

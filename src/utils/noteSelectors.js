@@ -39,3 +39,13 @@ export const notesSelector = createSelector(
     note => note.notes
 );
 
+export const openedNoteSelector = createSelector(
+    [getNote],
+    note => note.openedNote
+);
+
+// export const openedNoteSelector = createSelector(
+//     [getNote],
+//     note => note.openedNote
+// );
+//
