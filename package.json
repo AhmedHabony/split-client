@@ -2,7 +2,8 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/AhmedHabony/split-client",
+  "homepage": "https://AhmedHabony.github.io/split-client/",
+
   "dependencies": {
     "antd": "^3.24.3",
     "moment": "^2.24.0",
